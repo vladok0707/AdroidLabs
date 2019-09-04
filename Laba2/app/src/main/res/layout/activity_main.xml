@@ -10,7 +10,6 @@
         android:id="@+id/textView6"
         android:layout_width="203dp"
         android:layout_height="29dp"
-        android:layout_marginTop="10dp"
         android:text="@string/first"
         android:textAlignment="center"
         android:textSize="20sp"
@@ -25,9 +24,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginTop="70dp"
-        android:layout_marginEnd="10dp"
         android:text="Пол"
-        app:layout_constraintEnd_toStartOf="@+id/radioButton2"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toStartOf="@+id/textView6"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -35,91 +34,144 @@
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="60dp"
         android:text="Возраст"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@+id/textView7"
+        app:layout_constraintStart_toStartOf="@+id/textView7"
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
     <TextView
         android:id="@+id/textView10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="19dp"
-        tools:layout_editor_absoluteY="300dp" />
-
-    <TextView
-        android:id="@+id/textView11"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="19dp"
-        tools:layout_editor_absoluteY="356dp" />
+        android:layout_marginTop="60dp"
+        android:text="Рост"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@+id/textView9"
+        app:layout_constraintStart_toStartOf="@+id/textView9"
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
     <TextView
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="60dp"
         android:text="Вес"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@+id/textView8"
+        app:layout_constraintStart_toStartOf="@+id/textView8"
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView7" /><![CDATA[>
+    ]]>
 
     <RadioButton
         android:id="@+id/radioButton2"
-        android:layout_width="114dp"
-        android:layout_height="42dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="70dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="100dp"
+        android:checked="true"
         android:text="Мужской"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView7"
+        app:layout_constraintBottom_toBottomOf="@+id/textView7"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/textView7"
+        app:layout_constraintVertical_bias="0.461" />
 
     <RadioButton
         android:id="@+id/radioButton3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="70dp"
         android:text="Женский"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/radioButton2"
         app:layout_constraintStart_toEndOf="@+id/radioButton2"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/radioButton2" />
 
     <EditText
         android:id="@+id/Age"
-        android:layout_width="110dp"
-        android:layout_height="41dp"
-        android:layout_marginStart="56dp"
-        android:layout_marginTop="150dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintStart_toEndOf="@+id/textView8"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:inputType="numberDecimal"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@+id/textView8"
+        app:layout_constraintEnd_toEndOf="@+id/radioButton3"
+        app:layout_constraintStart_toStartOf="@+id/radioButton2"
+        app:layout_constraintTop_toTopOf="@+id/textView8" />
 
     <EditText
-        android:id="@+id/editText3"
-        android:layout_width="110dp"
-        android:layout_height="41dp"
-        android:layout_marginStart="64dp"
+        android:id="@+id/Kg"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
-        app:layout_constraintStart_toEndOf="@+id/textView9"
-        tools:layout_editor_absoluteY="211dp" />
+        android:inputType="numberDecimal"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@+id/textView9"
+        app:layout_constraintEnd_toEndOf="@+id/Age"
+        app:layout_constraintStart_toStartOf="@+id/Age"
+        app:layout_constraintTop_toTopOf="@+id/textView9" />
 
     <EditText
-        android:id="@+id/editText5"
-        android:layout_width="110dp"
-        android:layout_height="41dp"
+        android:id="@+id/height"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
-        tools:layout_editor_absoluteX="104dp"
-        tools:layout_editor_absoluteY="278dp" />
+        android:inputType="numberDecimal"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@+id/textView10"
+        app:layout_constraintEnd_toEndOf="@+id/Kg"
+        app:layout_constraintStart_toStartOf="@+id/Kg"
+        app:layout_constraintTop_toTopOf="@+id/textView10"
+        app:layout_constraintVertical_bias="0.461" />
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="Активность"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@+id/textView10"
+        app:layout_constraintStart_toStartOf="@+id/textView10"
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="@+id/height"
+        app:layout_constraintStart_toStartOf="@+id/height"
+        app:layout_constraintTop_toTopOf="@+id/textView"></Spinner>
+
+    <Button
+        android:id="@+id/OK"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:text="Подсчитать"
+        app:layout_constraintEnd_toEndOf="@+id/spinner"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/spinner" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@+id/spinner"
+        app:layout_constraintHorizontal_bias="0.479"
+        app:layout_constraintStart_toStartOf="@+id/spinner"
+        app:layout_constraintTop_toBottomOf="@+id/spinner" />
 </androidx.constraintlayout.widget.ConstraintLayout>
