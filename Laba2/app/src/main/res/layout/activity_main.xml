@@ -70,23 +70,22 @@
         android:layout_marginStart="100dp"
         app:layout_constraintBottom_toBottomOf="@+id/textView7"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView7" /><![CDATA[>
-    ]]>
+        app:layout_constraintTop_toTopOf="@+id/textView7">
 
-    <RadioButton
-        android:id="@+id/radioButton2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
 
-        android:layout_marginStart="100dp"
-        android:checked="true"
-        android:text="Мужской"
-        app:layout_constraintBottom_toBottomOf="@+id/textView7"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView7"
-        app:layout_constraintVertical_bias="0.461" />
+            android:layout_marginStart="100dp"
+            android:checked="true"
+            android:text="Мужской"
+            app:layout_constraintBottom_toBottomOf="@+id/textView7"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView7"
+            app:layout_constraintVertical_bias="0.461" />
 
-    <RadioButton
+        <RadioButton
         android:id="@+id/radioButton3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -95,7 +94,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/radioButton2"
         app:layout_constraintStart_toEndOf="@+id/radioButton2"
         app:layout_constraintTop_toTopOf="@+id/radioButton2" />
-
+    </RadioGroup>
     <EditText
         android:id="@+id/Age"
         android:layout_width="0dp"
